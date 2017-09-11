@@ -12,33 +12,61 @@ var _link = require('next/dist/lib/link.js');
 
 var _link2 = _interopRequireDefault(_link);
 
-var _Header = require('../components/Header');
+var _MyLayout = require('../components/MyLayout');
 
-var _Header2 = _interopRequireDefault(_Header);
+var _MyLayout2 = _interopRequireDefault(_MyLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/mohammedbamhraz/nextjs/hello-text/pages/index.js?entry';
 
 
-var index = function index() {
-  return _react2.default.createElement('div', {
+var PostLink = function PostLink(props) {
+  return _react2.default.createElement('li', {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     }
-  }, _react2.default.createElement(_Header2.default, {
-    __source: {
+  }, _react2.default.createElement(_link2.default, { as: '/p/' + props.id, href: '/post?title=' + props.title, __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     }
-  }), _react2.default.createElement('p', {
+  }, _react2.default.createElement('a', {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }
-  }, 'Hello world'));
+  }, props.title)));
 };
 
-exports.default = index;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkxpbmsiLCJIZWFkZXIiLCJpbmRleCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPOzs7Ozs7Ozs7QUFFUCxJQUFNLFFBQVEsU0FBUixBQUFRLFFBQUE7eUJBQ1osY0FBQTs7Z0JBQUE7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRSxBQUFDOztnQkFBRDtrQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLHNCQUNBLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQUhVLEFBQ1osQUFFRTtBQUhKLEFBT0E7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL21vaGFtbWVkYmFtaHJhei9uZXh0anMvaGVsbG8tdGV4dCJ9
+exports.default = function () {
+  return _react2.default.createElement(_MyLayout2.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    }
+  }, _react2.default.createElement('h1', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    }
+  }, 'My Blog'), _react2.default.createElement('ul', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }, _react2.default.createElement(PostLink, { id: 'hello-nextjs', title: 'hello Next.js', __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    }
+  }), _react2.default.createElement(PostLink, { id: 'lean-nextjs', title: 'Learn Next.js it\'s awesome', __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    }
+  }), _react2.default.createElement(PostLink, { id: 'depoly-nextjs', title: 'Deploy apps with Zeti', __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    }
+  })));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkxpbmsiLCJMYXlvdXQiLCJQb3N0TGluayIsInByb3BzIiwiaWQiLCJ0aXRsZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPOzs7Ozs7Ozs7QUFFUCxJQUFNLFdBQVcsU0FBWCxBQUFXLFNBQUEsQUFBQyxPQUFEO3lCQUNmLGNBQUE7O2dCQUFBO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQyxnQ0FBSyxZQUFVLE1BQWhCLEFBQXNCLElBQU0sdUJBQXFCLE1BQWpELEFBQXVEO2dCQUF2RDtrQkFBQSxBQUNFO0FBREY7cUJBQ0UsY0FBQTs7Z0JBQUE7a0JBQUEsQUFBSTtBQUFKO0FBQUEsV0FIVyxBQUNmLEFBQ0UsQUFDRSxBQUFVO0FBSGhCLEFBUUE7O2tCQUFlLFlBQUE7eUJBQ2IsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRSxjQUFBOztnQkFBQTtrQkFBQTtBQUFBO0FBQUEsS0FERixBQUNFLEFBQ0EsNEJBQUEsY0FBQTs7Z0JBQUE7a0JBQUEsQUFDRTtBQURGO0FBQUEsbUNBQ0UsQUFBQyxZQUFTLElBQVYsQUFBYSxnQkFBZSxPQUE1QixBQUFrQztnQkFBbEM7a0JBREYsQUFDRSxBQUNBO0FBREE7b0NBQ0EsQUFBQyxZQUFTLElBQVYsQUFBYSxlQUFjLE9BQTNCLEFBQWlDO2dCQUFqQztrQkFGRixBQUVFLEFBQ0E7QUFEQTtvQ0FDQSxBQUFDLFlBQVMsSUFBVixBQUFhLGlCQUFnQixPQUE3QixBQUFtQztnQkFBbkM7a0JBTlMsQUFDYixBQUVFLEFBR0U7QUFBQTs7QUFOTiIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvbW9oYW1tZWRiYW1ocmF6L25leHRqcy9oZWxsby10ZXh0In0=

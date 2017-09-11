@@ -1,11 +1,21 @@
 import Link from 'next/link'
-import Header from '../components/Header'
+import Layout from '../components/MyLayout'
 
-const index = () => (
-  <div>
-    <Header />
-    <p>Hello world</p>
-  </div>
+const PostLink = (props) => (
+  <li>
+    <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </li>
 )
 
-export default index
+export default () => (
+  <Layout>
+    <h1>My Blog</h1>
+    <ul>
+      <PostLink id="hello-nextjs" title="hello Next.js"/>
+      <PostLink id="lean-nextjs" title="Learn Next.js it's awesome"/>
+      <PostLink id="depoly-nextjs" title="Deploy apps with Zeti"/>
+    </ul>
+  </Layout>
+)

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import Layout from './MyLayout'
 const linkStyle = {
   marginRight: 15
 }
